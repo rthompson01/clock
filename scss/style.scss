@@ -78,3 +78,33 @@ img {max-width:100%;}
 /**
  * YOUR CODE HERE
  */
+
+
+.container{
+
+        position: relative;
+        width: 100%;
+        min-height: 65vh;
+        top: 50%;
+        left: 50%;
+        margin-right: -50%;
+        transform: translate(-50%, -50%);
+}
+
+.horozontal line{
+
+        bottom-border: 1px solid white;
+        transform: translate(-50%, -50%)
+
+}
+
+.body{
+
+    min-height: 50vh
+}
+
+.li{
+
+    cursor: pointer
+
+}
