@@ -73,58 +73,82 @@
  * GENERAL
  */
 
-img {max-width:100%;}
+img {
+    max-width: 100%;
+}
+* {
+    transition: all .25s ease;
+}
+body {
+    min-height: 100vh;
+    padding: 1em;
+    hr {
+        display: block;
+        background-color: grey;
+        min-height: 4px;
+        min-width: 1%;
+        border: 0;
+        margin: 2em 0;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
 
-/**
- * YOUR CODE HERE
- */
+    }
+}
+* {
+    transition: all .25s ease;
+}
+.circle {
+    width: 50em;
+    height: 50em;
+    border-radius: 50%;
+    border: 10px solid rgba(255, 255, 255, .1);
+    -webkit-transition: all 2s linear;
+    -webkit-transform: scale(.7);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+    z-index: 10;
+    background: repeating-radial-gradient(rgba(0, 0, 0, .1) 10px, rgba(0, 0, 0, .1) 10px, rgba(255, 255, 255, .1) 50px, rgba(255, 255, 255, .1) 140px);
+    
+    .clock {
+        width: 10em;
+        height:10em;
+        padding: 2em;
 
-
-.container{
-
-        position: relative;
-        width: 100%;
-        min-height: 65vh;
+        .container {
+        color: white;
+        position: absolute;
+        padding: 1em;
         top: 50%;
         left: 50%;
         margin-right: -50%;
         transform: translate(-50%, -50%);
-}
-        hr{
-    margin: 0 auto;
-    height: 1px;
-    background: white; 
-}
-
-.clock{
-
-        position: relative;
-        width: 100%;
-        min-height: 65vh;
+        font-size: 3em;
+            }
+    .hovercontainer {
+        color: white;
+        position: absolute;
+        padding: 1em;
         top: 50%;
         left: 50%;
         margin-right: -50%;
         transform: translate(-50%, -50%);
-}
-
-.hexadecimal{
-
-        position: relative;
-        width: 100%;
-        min-height: 100px;
-        top: 50%;
-        left: 50%;
-        margin-right: -50%;
-        transform: translate(-50%, -50%);
-}
-
-.body{
-
-    min-height: 50vh
-}
-
-.li{
-
-    cursor: default
-
+        font-size: 3em;
+        opacity: 0;
+        z-index: -1;
+    }
+        &:hover {
+            .hovercontainer {
+                opacity: 1;
+                z-index: 2;
+            }
+            .container {
+                opacity:0;
+            }
+        }
+    }
 }
